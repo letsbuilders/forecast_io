@@ -29,6 +29,10 @@ Or install it yourself as:
 ### Retrieve current weather data by geographic coordinates
 
     ForecastIO::Forecast.new.coordinates(latitude: 35, longitude: 139)
+    
+### Retrieve historic weather data by geographic coordinates
+
+    ForecastIO::Forecast.new.coordinates(latitude: 35, longitude: 139, time: Date.yesterday)
 
 ## Contributing
 

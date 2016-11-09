@@ -1,5 +1,3 @@
-require 'byebug'
-
 module ForecastIO
   class Request
     attr_reader :configuration
