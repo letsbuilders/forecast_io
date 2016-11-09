@@ -1,6 +1,6 @@
 module ForecastIO
   class Configuration
-    HOST = 'https://api.forecast.io'
+    HOST = 'https://api.darksky.net'
 
     attr_accessor :api_key
     attr_reader :host

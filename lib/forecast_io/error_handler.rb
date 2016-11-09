@@ -19,8 +19,11 @@ module ForecastIO
 
     def find_error_class
       case response.status
-      when 400 then return Errors::InvalidParams
-      when 403 then return Errors::Forbidden
+        when 400 then return Errors::InvalidParams
+        when 404 then return Errors::InvalidParams
+        when 403 then return Errors::Forbidden
+        else
+          return Errors::ConnectionError
       end
     end
   end
