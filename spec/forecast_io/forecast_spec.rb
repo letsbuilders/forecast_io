@@ -8,7 +8,7 @@ module ForecastIO
 
     describe 'coordinates' do
       it 'returns current weather by geographic coordinates' do
-        url = 'https://api.forecast.io/forecast/api_key/38.992393,-0.378382?exclude=offset,minutely,hourly,daily,alerts,flags'
+        url = 'https://api.darksky.net/forecast/api_key/38.992393,-0.378382?exclude=offset,minutely,hourly,daily,alerts,flags'
 
         response = {
           'latitude' => 38.992393,

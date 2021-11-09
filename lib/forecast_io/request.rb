@@ -37,10 +37,10 @@ module ForecastIO
 
     def rescue_errors
       yield
-    rescue Faraday::Error::ConnectionFailed => e
-      raise Errors::ConnectionError.new(e.message)
-    rescue Faraday::Error::TimeoutError
+    rescue Faraday::TimeoutError
       raise Errors::TimeoutError
+    rescue Faraday::ConnectionFailed => e
+      raise Errors::ConnectionError.new(e.message)
     end
 
     def build_query(params)
