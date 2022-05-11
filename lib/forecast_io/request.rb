@@ -44,7 +44,7 @@ module ForecastIO
     end
 
     def build_query(params)
-      URI.escape(params.collect{ |k,v| "#{k}=#{v}" }.join('&'))
+      URI::Parser.new.escape(params.collect{ |k,v| "#{k}=#{v}" }.join('&'))
     end
 
     def klass_name
